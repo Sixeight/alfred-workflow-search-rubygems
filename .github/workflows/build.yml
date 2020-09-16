@@ -25,4 +25,4 @@ jobs:
 
     - uses: actions/upload-artifact@v2
       with:
-        path: ./alfred-search-rubygems.alfredworkflow
+        path: ./alfred-workflow-search-rubygems.alfredworkflow
