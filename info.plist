@@ -58,7 +58,7 @@
 				<key>runningsubtext</key>
 				<string>searching...</string>
 				<key>script</key>
-				<string>./alfred-search-rubygems $1</string>
+				<string>./alfred-workflow-search-rubygems $1</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
