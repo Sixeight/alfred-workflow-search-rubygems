@@ -8,6 +8,9 @@ Search gem from [RubyGems.org][] workflow for [Alfred][].
 
 Download [.alfredworkflow](https://github.com/Sixeight/alfred-workflow-search-rubygems/releases) and double click it.
 
+NOTE: You must allow the app to run.
+See also: https://support.apple.com/en-us/HT202491
+
 ## Actions
 
 | Modifier Key | Action                       |
