@@ -10,9 +10,13 @@ import (
 )
 
 type searchResult struct {
-	Name       string `json:"name"`
-	Authors    string `json:"authors"`
-	ProjectURI string `json:"project_uri"`
+	Name             string `json:"name"`
+	Version          string `json:"version"`
+	Info             string `json:"info"`
+	ProjectURI       string `json:"project_uri"`
+	HomePageURI      string `json:"homepage_uri"`
+	DocumentationURI string `json:"documentation_uri"`
+	SourceCodeURI    string `json:"source_code_uri"`
 }
 
 func search(query string) ([]*searchResult, error) {
