@@ -10,7 +10,7 @@ all: build
 
 .PHONY: build
 build:
-	GOOS=darwin GOARCH=amd64 ${GO} build -race -o ${DIST}/${BIN} .
+	GOOS=darwin GOARCH=amd64 ${GO} build -o ${DIST}/${BIN} .
 
 .PHONY: pack
 pack: build
