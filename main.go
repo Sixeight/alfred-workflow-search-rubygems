@@ -13,13 +13,10 @@ func init() {
 }
 
 func setupItem(result *searchResult) {
-	item := wf.NewItem(result.Name + " " + result.Version)
-	item.Subtitle(result.Info)
-	item.Arg(result.ProjectURI)
-	item.Valid(true)
-
-	cmdMod := item.NewModifier(aw.ModCmd)
-	cmdMod.Subtitle("Open source code")
+	item := wf.NewItem(result.Name + " " + result.Version).
+		Subtitle(result.Info).
+		Arg(result.ProjectURI).
+		Valid(true)
 
 	var uri string
 	if result.SourceCodeURI != "" {
@@ -28,15 +25,16 @@ func setupItem(result *searchResult) {
 		uri = result.HomePageURI
 	}
 	if uri != "" {
-		cmdMod.Arg(uri)
-		cmdMod.Valid(true)
+		item.NewModifier(aw.ModCmd).
+			Subtitle("Open source code").
+			Arg(uri).Valid(true)
 	}
 
 	if result.DocumentationURI != "" {
-		ctrMod := item.NewModifier(aw.ModCtrl)
-		ctrMod.Arg(result.DocumentationURI)
-		ctrMod.Subtitle("Open documentation")
-		ctrMod.Valid(true)
+		item.NewModifier(aw.ModCtrl).
+			Arg(result.DocumentationURI).
+			Subtitle("Open documentation").
+			Valid(true)
 	}
 }
 
